@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JAWS comments</title>
+<style type="text/css">
+.code {
+	font-family: Courier New, Courier, monospace;
+}
+</style>
+</head>
+
+<body>
+<h2>Overall:</h2>
+<ul>
+  <li>Scrolling is a productivity killer. The app should respond to the size of the viewport and the elements should be fluid. </li>
+  <li>Panels should be collapsible as suported by jquery</li>
+  <li>Three column as supported by bootstrap</li>
+  <li>mobile device friendly</li>
+  <li>Shorter  main menu bar, responsive to narrower viewports by morphing to collapsible menu accessed by logo icon</li>
+  <li>Cstomizable preferences for which display and action panels to minimize</li>
+  <li>backarrow should be predictable</li>
+  <li>Judge's day:
+    <ul>
+      <li>Plan the day and future days (Daily Docket Screen)</li>
+      <li>Prepare for Hearing Dockets (Case File Screen)</li>
+      <li>Conduct Hearing Docket (Case File and Orders Screens)</li>
+      <li>Memorialize Result With Order (Orders Screen)</li>
+      <li>For general managerial utilities, task list and case notes functions</li>
+    </ul>
+  </li>
+</ul>
+<h2>Top Level Menu:</h2>
+<p>New choices: Daily Docket, Orders, Case File, Task List, Help</p>
+<ul>
+  <li>Orders combines Work Queue and Custom Orders.</li>
+  <li>Case File combines &quot;Case Documents,&quot; &quot;Case Notes,&quot; and &quot;Case Search&quot;</li>
+  <li>Help opens email to help desk</li>
+  <li>Orders and Task List could be in a different font weight or color if there are pending items in the work queue or overdue items on the task list. </li>
+</ul>
+<h3>Daily Docket </h3>
+<ul>
+  <li>Calendar should be collapsible to save space, replace with icon that restores it.</li>
+  <li>Calendar and Daily docket table should be fluid, moving to left if calendar is collapsed.
+    <ul>
+      <li>Docket Data items: 
+        <ul>
+          <li>Start time, </li>
+          <li>Event Type,</li>
+          <li>Case No, </li>
+          <li>Decription, </li>
+          <li>Delete Case Type replace with Matter to be Heard, ideally the doc specificed in the notice of hearing</li>
+          <li>Include field for document reference (cross ref: require appointments to include the doc ref of the matter to be heard)</li></ul></li></ul></li>
+  <li>Clicking on a Daily Docket Case entry now opens the progress docket, the orders submenu, and two Create Order panels. Instead, it should open the Case File view, which differs in these ways:
+    <ul>
+      <li>Collapse the calendar, it's not needed now.  That brings Progress docket to top of screen. </li>
+      <li>Collapse the day's docket, bringing case information panel to the top.  It should display the case number and style, and have a window for a new case number to be entered, and an &quot;advanced case search&quot; button.</li>
+      <li>The case Info Panel also should have sub-panels accessed by tabs:
+        <ul>
+          <li>Case Detail</li>
+          <li>Orders. There should be only one Orders panel, with tab-accessible options
+            <ul>
+              <li>Create Standard Order, </li>
+              <li>Create Scheduling Order, </li>
+              <li>Create Custom Order</li>
+              <li>Check Work Queue for Proposed Order w/ matching case number</li>
+            </ul>
+          </li>
+          <li>Clerk's Ledger (replaces case financials) - read only -display in tab, not new window</li>
+        </ul>
+      
+         
+    
+        <ul>
+          <li>Case Notes -CRUD- also tab not new window.</li>
+          <li>Drop the sub-menu buttons they are unnecessary</li>
+        </ul>
+      </li>
+      <li>Use of the back button should revert to the previous daily docket view without making a round trip to the server. </li>
+    </ul>
+  </li>
+  <li>Clicking on Calendar Entry changes the appointments table to match the date selected. No changes necessary.</li>
+</ul>
+<h3>Case File</h3>
+<ul>
+  <li>Clicking on the <span class="code">Case File</span> Top level menu item gives the same view as clicking on a Daily Docket Case Entry, except that  its top line is the &quot;Case search&quot; bar that now exists. That is, Daily Docket and Case File are the same page with different views expanded/collapsed.</li>
+  <li>Each entry in the progress docket now has only the <span class="code">view</span> option.  There should be four others: open in separate wiondow, grant, deny, or partially grant. Grant or deny opens the Order Granting (or Denying) Motion Template with the title of the associated docket entry, and its document reference number, listed in the second line of the order title. That way, orders can be entered directly on the progress docket when appropriate. Opening in new window is necessary if, as assumed, the order creation function must be implememneted in a modal window. </li>
+</ul>
+<h3>Orders</h3>
+<ul>
+  <li>Guess what? Orders are part of the same single page, different view design. </li>
+  <li>One big improvement in workflow support would be to have the progress docket and file documents available when composing an order. If the actual construction of the order must be done through a modal window, it may not be possible to access different documents while composing the order.  But if the documents can be opened in their own windows using the adobe reader before drafting the order starts, that would be a workaround. </li>
+  <li>A better solution would be to have a drafting area, maybe under  the case notes tab, which could be open alongside the progress docket and the document viewing area without losing state when diffrent documents are called up and viewed. Then a control could feed the composed text into the order generator which could process it through the modal window. </li>
+  <li>The modal window itself-
+    <ul>
+      <li>The window menu is cryptic and should be simplified:
+        <ul>
+          <li>remove &quot;category&quot; it doesnt matter at this point</li>
+          <li>this is the wrong place to edit WQ categories</li>
+          <li>the top line should just say &quot;This order template is ______&quot; and give a button to save as new template</li>
+          <li>the second line should be the same as the current top line, except 
+            <ul>
+              <li>the &quot;<span class="code">append file</span>&quot; button (w/o capton) should be inserted to the right of  &quot;cancel order&quot;</li>
+              <li>&quot;<span class="code">place in work queue</span>&quot; should be a button, not a checkbox</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>
