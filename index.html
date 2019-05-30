@@ -4,30 +4,40 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Assignment 2- S. Stephens</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
 <link rel="stylesheet" type="text/css" href="css/css.css" >
 </head>
 <body>
-<h1>Rules for Drafting Rules</h1>
 
-<div class="row">
-  
-  <div class="itembox col-lg-4 col-md-6 col-sd-12">
-    <div class="itemtitle">Rule 1</div>
-      <p>The first rule of rule drafting is to make the common case fast.  Remember that the rule is intended to facilitate a large number of transactions and most of them can readily be classified accrding to a set of standard criteria.  Collectively, the rules must identify the set of fast cases and make them as frictionless as possible. </p>
-  </div>
+  <body ng-app="myApp">
 
-  <div class="itembox col-lg-4 col-md-6 col-sd-12">
-    <div class="itemtitle seconditem">Rule 2 </div>
-      <p>The second rule for writing rules is to develop a modularity plan and adhere to it strictly.  Each rule, and each subcomponent recursively, should have a clearly defined and singular purpose. </p>
-  </div>
-  
-  <div class="itembox col-lg-4 col-md-12 col-sd-12">
-    <div class="itemtitle thirditem">Rule 3</div>
-      <p>The third rule for rule-wrtiting is to use simple, transparent syntax, minimizing any jargon and complex linquistic constructs, avoiding cross references except where necessary, and never using a separate definition section for a term that is only used once or twice. </p>
-  </div>
+  <p><a href="#/!">Main</a></p>
 
-</div>
+  <a href="#!red">Red</a>
+  <a href="#!green">Green</a>
+  <a href="#!blue">Blue</a>
 
-</body>
+  <div ng-view></div>
+
+  <script>
+  var app = angular.module("myApp", ["ngRoute"]);
+  app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+      templateUrl : "main.htm"
+    })
+    .when("/red", {
+      templateUrl : "red.htm"
+    })
+    .when("/green", {
+      templateUrl : "green.htm"
+    })
+    .when("/blue", {
+      templateUrl : "blue.htm"
+    });
+  });
+  </script>
+  </body>
 </html>
-
