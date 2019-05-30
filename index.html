@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Assignment 2- S. Stephens</title>
+<title>JAWS UI 2- S. Stephens</title>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
@@ -13,11 +13,11 @@
 
   <body ng-app="myApp">
 
-  <p><a href="#/!">Main</a></p>
+  <p><a href="#/!">Docket</a></p>
 
-  <a href="#!red">Red</a>
-  <a href="#!green">Green</a>
-  <a href="#!blue">Blue</a>
+  <a href="#!red">Cases</a>
+  <a href="#!green">Orders</a>
+  <a href="#!blue">Chambers</a>
 
   <div ng-view></div>
 
@@ -26,16 +26,16 @@
   app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-      templateUrl : "main.htm"
+      templateUrl : "docket.htm"
     })
-    .when("/red", {
-      templateUrl : "red.htm"
+    .when("/cases", {
+      templateUrl : "cases.htm"
     })
-    .when("/green", {
-      templateUrl : "green.htm"
+    .when("/orders", {
+      templateUrl : "orders.htm"
     })
-    .when("/blue", {
-      templateUrl : "blue.htm"
+    .when("/chambers", {
+      templateUrl : "chambers.htm"
     });
   });
   </script>
