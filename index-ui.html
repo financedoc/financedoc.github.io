@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JAWS UI 2-states S. Stephens</title>
+<style>.active { color: red; font-weight: bolder; }</style>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/css.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.js"></script>
+<script src="jaws2.js"></script>
+<link rel="stylesheet" type="text/css" href="css/css.css" >
+</head>
+<body>
+
+  <body ng-app="myApp">
+
+  <p><a ui-sref="docket" ui-sref-active="active">Docket</a>
+  <a ui-sref="cases" ui-sref-active="active">Cases</a>
+  <a ui-sref="orders" ui-sref-active="active">Orders</a>
+  <a ui-sref="chambers" ui-sref-active="active">Chambers</a>
+</p>
+  <div ng-view></div>
+
+
+  </body>
+</html>
