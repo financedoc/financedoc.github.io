@@ -38,10 +38,10 @@
 
 <form name="jsonform" action="">
 	Parent<input type="text" name="p"></input>Name<input type="text" name="n">
-	  <br><input type="button" onClick=function(){treeData[0].children.push({"name":"Mary","parent":"Grandfather"});}>
+	  <br><input type="button" onClick= document.getElementById("msgpanel").text = "Boo";
 	  </input>
 </form>
-	 
+<div id="msgpanel"></div>	 
 	
 <script>
 
@@ -202,9 +202,9 @@ function click(d) {
 }
 
 	
-function addnode(p,n){
-	treeData[0].children.push({"name":"Mary","parent":"Grandfather"});
-}
+//function addnode(p,n){
+//	treeData[0].children.push({"name":"Mary","parent":"Grandfather"});
+//}
 </script>
 	
   </body>
