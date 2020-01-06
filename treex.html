@@ -204,7 +204,7 @@ function click(d) {
 	
 function newNode(p,n){
 	var nn = {
-	name: function(n){return n},
+	name: function(){return document.getElementById("N").value},
 	parent: "Grandfather"
 	}
 	treeData[0].children.push(nn);
